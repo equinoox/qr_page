@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quantivo Installation</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="activation-card" aria-labelledby="page-title">
+        <div class="brand-mark" aria-hidden="true">Q</div>
+
+        <div class="copy">
+          <h1 id="page-title">Quantivo Installation</h1>
+          <p>Enter your activation code to download the Android app.</p>
+        </div>
+
+        <form class="activation-form" id="activation-form">
+          <label class="sr-only" for="activation-code">Activation code</label>
+          <input
+            id="activation-code"
+            name="activation-code"
+            type="text"
+            placeholder="Enter Activation Code"
+            autocomplete="one-time-code"
+            spellcheck="false"
+          />
+
+          <button type="submit" class="primary-button">Verify Code</button>
+        </form>
+
+        <p class="message error-message" id="error-message" role="alert" hidden>
+          Invalid activation code. Please try again.
+        </p>
+
+        <p class="message success-message" id="success-message" hidden>
+          Activation successful. You can now download Quantivo.
+        </p>
+
+        <!-- Manually place the APK file at docs/downloads/quantivo.apk before publishing. -->
+        <a
+          class="download-button"
+          id="download-button"
+          href="./downloads/quantivo.apk"
+          download
+          hidden
+        >
+          Download APK
+        </a>
+      </section>
+    </main>
+
+    <footer>Quantivo &bull; Premium Access</footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
